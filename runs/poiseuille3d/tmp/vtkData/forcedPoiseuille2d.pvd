@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<VTKFile type="Collection" version="0.1" byte_order="LittleEndian">
+<Collection>
+<DataSet timestep="0" group="" part="" file="data/forcedPoiseuille2d_iT0000000.vtm"/>
+<DataSet timestep="12150" group="" part="" file="data/forcedPoiseuille2d_iT0012150.vtm"/>
+<DataSet timestep="13112" group="" part="" file="data/forcedPoiseuille2d_iT0013112.vtm"/>
+</Collection>
+</VTKFile>

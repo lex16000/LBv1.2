@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<VTKFile type="ImageData" version="0.1" byte_order="LittleEndian" compressor="vtkZLibDataCompressor">
+<ImageData WholeExtent="-1 31 -1 10 -1 10" Origin="3.33333 0 0" Spacing="0.111111 0.111111 0.111111">
+<Piece Extent="-1 31 -1 10 -1 10">
+<PointData>
+<DataArray type="Float32" Name="cuboid" NumberOfComponents="1" format="binary" encoding="base64">
+AQAAAEBKAABASgAALQAAAA==eJztwwEJAAAMBKGLtv6pluNBwepSVVVVVVVVVVVVVVVVVVVVVVV15gM+0qQ9
+</DataArray>
+</PointData>
+</Piece>
+</ImageData>
+</VTKFile>

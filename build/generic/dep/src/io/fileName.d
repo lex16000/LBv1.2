@@ -116,5 +116,46 @@ build/generic/obj/src/io/fileName.o: src/io/fileName.cpp /usr/include/stdc-prede
  /usr/include/c++/5/tuple /usr/include/c++/5/array \
  /usr/include/c++/5/bits/uses_allocator.h src/core/singleton.h \
  src/io/ostreamManager.h /usr/include/c++/5/iostream \
- src/communication/mpiManager.h /usr/include/x86_64-linux-gnu/sys/stat.h \
+ src/communication/mpiManager.h /usr/lib/openmpi/include/mpi.h \
+ /usr/lib/openmpi/include/mpi_portable_platform.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/mpicxx.h \
+ /usr/include/c++/5/map /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/ext/aligned_buffer.h \
+ /usr/include/c++/5/bits/stl_map.h /usr/include/c++/5/bits/stl_multimap.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/constants.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/functions.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/datatype.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/exception.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/op.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/status.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/request.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/group.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/comm.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/win.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/file.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/errhandler.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intracomm.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/topology.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intercomm.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/info.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/datatype_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/functions_inln.h \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/request_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/comm_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intracomm_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/topology_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intercomm_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/group_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/op_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/errhandler_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/status_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/info_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/win_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/file_inln.h \
+ /usr/include/c++/5/vector /usr/include/c++/5/bits/stl_construct.h \
+ /usr/include/c++/5/bits/stl_uninitialized.h \
+ /usr/include/c++/5/bits/stl_vector.h \
+ /usr/include/c++/5/bits/stl_bvector.h /usr/include/c++/5/bits/vector.tcc \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h

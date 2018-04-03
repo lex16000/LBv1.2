@@ -19,28 +19,21 @@
 #  License along with this program; if not, write to the Free
 #  Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 #  Boston, MA  02110-1301, USA.
-#
-#
-###########################################################################
-###########################################################################
-## DEFINITIONS TO BE CHANGED
-
-ROOT            := ../..
-SRC             :=
-OUTPUT          := droplet3D_movingBoundaries
 
 ###########################################################################
 ## definitions
 
-include $(ROOT)/Makefile.inc
+include definitions.mk
 
-OBJECTS    := $(foreach file, $(SRC) $(OUTPUT), $(PWD)/$(file).o)
-DEPS       := $(foreach file, $(SRC) $(OUTPUT), $(PWD)/$(file).d)
+include $(ROOT)/global.mk
+
+OBJECTS    := $(foreach file, $(SRC), $(PWD)/$(file:.cpp=.o))
+DEPS       := $(foreach file, $(SRC), $(PWD)/$(file:.cpp=.d))
 
 ###########################################################################
 ## all
 
-all : depend compile updatelib link
+all : depend compile link
 
 
 ###########################################################################
@@ -82,16 +75,15 @@ cleandep:
 	@rm -f $(DEPS)
 
 cleanbuild:
-	@echo Clean olb main
 	@cd $(ROOT); \
-	 $(MAKE) cleanbuild;
+	 $(MAKE) cleanlib;
 
 ###########################################################################
 ## update lib
 
-updatelib :
+$(ROOT)/$(LIBDIR)/lib$(LIB).a :
 	@cd $(ROOT); \
-	 $(MAKE) all;
+	$(MAKE) all
 
 ###########################################################################
 ## link
@@ -100,7 +92,7 @@ link: $(OUTPUT)
 
 $(OUTPUT): $(OBJECTS) $(ROOT)/$(LIBDIR)/lib$(LIB).a
 	@echo Link $@
-	$(CXX) $(foreach file, $(SRC), $(file).o) $@.o $(LDFLAGS) -L$(ROOT)/$(LIBDIR) -l$(LIB) -lz -o $@
+	$(CXX) $(foreach file, $(SRC), $(file:.cpp=.o)) $(LDFLAGS) -L$(ROOT)/$(LIBDIR) -l$(LIB) -lz -o $@
 
 ###########################################################################
 ## include dependencies

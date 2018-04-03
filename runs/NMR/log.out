@@ -1,0 +1,145 @@
+[MpiManager] Sucessfully initialized, numThreads=1
+[UnitConverter] ----------------- UnitConverter information -----------------
+[UnitConverter] -- Parameters:
+[UnitConverter] Resolution:                       N=              62
+[UnitConverter] Lattice velocity:                 latticeU=       0.004
+[UnitConverter] Lattice relaxation frequency:     omega=          1.78571
+[UnitConverter] Lattice relaxation time:          tau=            0.56
+[UnitConverter] Characteristical length(m):       charL=          0.0124
+[UnitConverter] Characteristical speed(m/s):      charU=          0.001
+[UnitConverter] Phys. kinematic viscosity(m^2/s): charNu=         1e-06
+[UnitConverter] Phys. density(kg/m^d):            charRho=        998
+[UnitConverter] Characteristical pressure(N/m^2): charPressure=   0
+[UnitConverter] Reynolds number:                  reynoldsNumber= 12.4
+[UnitConverter] 
+[UnitConverter] -- Conversion factors:
+[UnitConverter] Voxel length(m):                  physDeltaX=     0.0002
+[UnitConverter] Time step(s):                     physDeltaT=     0.0008
+[UnitConverter] Velocity factor(m/s):             physVelocity=   0.25
+[UnitConverter] Density factor(kg/m^3):           physDensity=    998
+[UnitConverter] Mass factor(kg):                  physMass=       7.984e-09
+[UnitConverter] Viscosity factor(m^2/s):          physViscosity=  5e-05
+[UnitConverter] Force factor(N):                  physForce=      2.495e-06
+[UnitConverter] Pressure factor(N/m^2):           physPressure=   62.375
+[UnitConverter] -------------------------------------------------------------
+[main] Prepare Geometry ...
+[main] reading file ...
+[main] bishierin
+[main] reading file ... ok
+[SuperGeometry3D] cleaned 10772 outer boundary voxel(s)
+[SuperGeometry3D] error!
+[CuboidGeometry3D] ---Cuboid Stucture Statistics---
+[CuboidGeometry3D]  Number of Cuboids: 	1
+[CuboidGeometry3D]  Delta  (min): 		1
+[CuboidGeometry3D]         (max): 		1
+[CuboidGeometry3D]  Ratio  (min): 		0.405405
+[CuboidGeometry3D]         (max): 		2.3871
+[CuboidGeometry3D]  Nodes  (min): 		550560
+[CuboidGeometry3D]         (max): 		550560
+[CuboidGeometry3D]  Weight (min): 		550560
+[CuboidGeometry3D]         (max): 		550560
+[CuboidGeometry3D] --------------------------------
+[SuperGeometryStatistics3D] materialNumber=0; count=275484; minPhysR=(0,0,0); maxPhysR=(61,59,147)
+[SuperGeometryStatistics3D] materialNumber=1; count=216335; minPhysR=(6,2,1); maxPhysR=(58,54,146)
+[SuperGeometryStatistics3D] materialNumber=2; count=55146; minPhysR=(5,1,0); maxPhysR=(59,55,147)
+[SuperGeometryStatistics3D] materialNumber=3; count=1507; minPhysR=(11,6,0); maxPhysR=(55,49,0)
+[SuperGeometryStatistics3D] materialNumber=4; count=2088; minPhysR=(6,3,147); maxPhysR=(57,54,147)
+[main] Number of timesteps: 18750
+[main] press enter
+[main] Prepare Geometry ... OK
+[prepareLattice] Prepare Lattice ...
+[prepareLattice] Prepare Lattice ... OK
+[LatticeStatistics] step=0; t=0; uMax=1.49167e-154; avEnergy=0; avRho=1
+writing vtk... 0 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=0; meanVelocity[m/s]=0
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=0; meanPressure[mmHg]=0
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=0; meanVelocity[m/s]=0
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=0; meanPressure[mmHg]=0
+[LatticeStatistics] step=375; t=0.3; uMax=6.85633e-05; avEnergy=1.04775e-10; avRho=1.00002
+writing vtk... 2 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=11615; meanVelocity[m/s]=8.11671e-06
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=1.73011; meanPressure[mmHg]=9.06846e-06
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1310.91; meanVelocity[m/s]=1.57941e-06
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=0.178305; meanPressure[mmHg]=1.61132e-06
+[LatticeStatistics] step=750; t=0.6; uMax=0.000520998; avEnergy=9.69811e-09; avRho=1.00023
+writing vtk... 4 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=89721.2; meanVelocity[m/s]=6.26982e-05
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=16.1941; meanPressure[mmHg]=8.48819e-05
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=28837.2; meanVelocity[m/s]=3.47437e-05
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=3.64175; meanPressure[mmHg]=3.29101e-05
+[LatticeStatistics] step=1125; t=0.9; uMax=0.00185736; avEnergy=1.32764e-07; avRho=1.00081
+writing vtk... 6 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=266978; meanVelocity[m/s]=0.000186568
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=52.0955; meanPressure[mmHg]=0.00027306
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=131456; meanVelocity[m/s]=0.000158381
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=14.0155; meanPressure[mmHg]=0.000126657
+[ValueTracer] average=3.50605e-08; stdDev/average=1.71146
+[LatticeStatistics] step=1500; t=1.2; uMax=0.00454286; avEnergy=7.25286e-07; avRho=1.00171
+writing vtk... 8 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=536327; meanVelocity[m/s]=0.000374791
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=106.629; meanPressure[mmHg]=0.000558898
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=327966; meanVelocity[m/s]=0.00039514
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=30.2858; meanPressure[mmHg]=0.00027369
+[LatticeStatistics] step=1875; t=1.5; uMax=0.0082343; avEnergy=2.29601e-06; avRho=1.00276
+writing vtk... 10 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=863582; meanVelocity[m/s]=0.000603482
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=169.197; meanPressure[mmHg]=0.000886852
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=599387; meanVelocity[m/s]=0.000722153
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=49.5812; meanPressure[mmHg]=0.000448061
+[LatticeStatistics] step=2250; t=1.8; uMax=0.0126591; avEnergy=5.05717e-06; avRho=1.00377
+writing vtk... 12 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.19501e+06; meanVelocity[m/s]=0.000835085
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=229.656; meanPressure[mmHg]=0.00120375
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=898585; meanVelocity[m/s]=0.00108263
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=68.0497; meanPressure[mmHg]=0.000614959
+[ValueTracer] average=2.83465e-06; stdDev/average=0.751359
+[LatticeStatistics] step=2625; t=2.1; uMax=0.0172407; avEnergy=8.62323e-06; avRho=1.00459
+writing vtk... 14 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.48323e+06; meanVelocity[m/s]=0.0010365
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=278.035; meanPressure[mmHg]=0.00145733
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.1794e+06; meanVelocity[m/s]=0.00142096
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=83.2077; meanPressure[mmHg]=0.000751941
+[LatticeStatistics] step=3000; t=2.4; uMax=0.021014; avEnergy=1.20649e-05; avRho=1.00511
+writing vtk... 16 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.68299e+06; meanVelocity[m/s]=0.00117609
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=308.368; meanPressure[mmHg]=0.00161632
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.39648e+06; meanVelocity[m/s]=0.00168251
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=92.6632; meanPressure[mmHg]=0.000837389
+[LatticeStatistics] step=3375; t=2.7; uMax=0.0234659; avEnergy=1.44321e-05; avRho=1.0053
+writing vtk... 18 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.78381e+06; meanVelocity[m/s]=0.00124655
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=318.659; meanPressure[mmHg]=0.00167027
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.5262e+06; meanVelocity[m/s]=0.00183879
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=96.0867; meanPressure[mmHg]=0.000868327
+[LatticeStatistics] step=3750; t=3; uMax=0.024491; avEnergy=1.53441e-05; avRho=1.00523
+writing vtk... 20 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.80418e+06; meanVelocity[m/s]=0.00126078
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=314.583; meanPressure[mmHg]=0.0016489
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.56876e+06; meanVelocity[m/s]=0.00189007
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=94.7305; meanPressure[mmHg]=0.000856071
+[ValueTracer] average=1.24338e-05; stdDev/average=0.195548
+[LatticeStatistics] step=4125; t=3.3; uMax=0.0245188; avEnergy=1.53481e-05; avRho=1.00512
+writing vtk... 22 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.80326e+06; meanVelocity[m/s]=0.00126014
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=309.023; meanPressure[mmHg]=0.00161976
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.56193e+06; meanVelocity[m/s]=0.00188184
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=92.6457; meanPressure[mmHg]=0.000837231
+[LatticeStatistics] step=4500; t=3.6; uMax=0.0243495; avEnergy=1.52494e-05; avRho=1.00511
+writing vtk... 24 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.80199e+06; meanVelocity[m/s]=0.00125926
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=308.201; meanPressure[mmHg]=0.00161545
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.55251e+06; meanVelocity[m/s]=0.0018705
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=92.402; meanPressure[mmHg]=0.000835029
+[LatticeStatistics] step=4875; t=3.9; uMax=0.0243171; avEnergy=1.52732e-05; avRho=1.00512
+writing vtk... 26 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.80206e+06; meanVelocity[m/s]=0.0012593
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=308.986; meanPressure[mmHg]=0.00161956
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.55208e+06; meanVelocity[m/s]=0.00186997
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=92.7256; meanPressure[mmHg]=0.000837954
+[ValueTracer] average=1.53056e-05; stdDev/average=0.00359927
+[LatticeStatistics] step=5250; t=4.2; uMax=0.0243428; avEnergy=1.53228e-05; avRho=1.00513
+writing vtk... 28 %
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=1431; volumetricFlowRate[ml/s]=1.80229e+06; meanVelocity[m/s]=0.00125946
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=1431; force[N]=309.197; meanPressure[mmHg]=0.00162067
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=830; volumetricFlowRate[ml/s]=1.55372e+06; meanVelocity[m/s]=0.00187195
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=830; force[N]=92.8072; meanPressure[mmHg]=0.000838691

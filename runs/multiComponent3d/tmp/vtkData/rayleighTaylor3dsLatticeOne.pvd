@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<VTKFile type="Collection" version="0.1" byte_order="LittleEndian">
-<Collection>
-<DataSet timestep="0" group="" part="" file="data/rayleighTaylor3dsLatticeOne_iT0000000.vtm"/>
-<DataSet timestep="50" group="" part="" file="data/rayleighTaylor3dsLatticeOne_iT0000050.vtm"/>
-</Collection>
-</VTKFile>

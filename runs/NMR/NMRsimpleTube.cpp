@@ -6,7 +6,7 @@
 #include <cmath>
 #include <iostream>
 #include <fstream>
-#include "../NMRShared.h"
+//#include "../NMRShared.h"
 
 using namespace olb;
 using namespace olb::descriptors;
@@ -168,6 +168,7 @@ void getResults( SuperLattice3D<T, DESCRIPTOR>& sLattice,
   vtmWriter.addFunctor( pressure );
   vtmWriter.addFunctor( strain );
 
+
   const int statIter = converter.getLatticeTime( maxPhysT )/50.;
   const int outputFlux = statIter;
 
@@ -198,7 +199,7 @@ void getResults( SuperLattice3D<T, DESCRIPTOR>& sLattice,
    {
 
 	   std::vector<T> zPositions = {10., 75.};
-	   test_function(zPositions);
+
 	   std::vector<int> materials = { 1, 3, 4 };
 	   for (auto& zPos : zPositions) {
 		   Vector<T, 3> center(nx/2,ny/2, zPos);
@@ -210,14 +211,14 @@ void getResults( SuperLattice3D<T, DESCRIPTOR>& sLattice,
 		   T outputV[vFluxInflow.getTargetDim()] = {T()};
 		   vFluxInflow(outputV, inputV);
 		   cout << "Flux: " << outputV[0] << std::endl;
-		   //vFluxInflow.print( "inflow","ml/s" );
+		   vFluxInflow.print( "inflow","ml/s" );
 
 		   SuperPlaneIntegralFluxPressure3D<T> pFluxInflow( sLattice, converter, superGeometry, slice, materials, BlockDataReductionMode::Discrete );
 		   int inputP[1] = {};
 		   T outputP[pFluxInflow.getTargetDim()] = {T()};
 		   pFluxInflow(outputP, inputP);
 		   cout << "FluxP: " << outputP[0] << std::endl;
-		   //pFluxInflow.print( "inflow","N","mmHg" );
+		   pFluxInflow.print( "inflow","N","mmHg" );
 
 	   }
    }
@@ -275,8 +276,31 @@ int main( int argc, char* argv[] ) {
   clout << "Prepare Geometry ..." << std::endl;
 
 
+  // === Read MRI Data === //
+  // global analytical solution to optimize against
+  olb::AnalyticalF3D<T,T>* solution;
 
+  SuperIndicatorF3D<T>* objectiveDomain;
+    std::string dataName = "result.vti"; //opti_config["Application"]["MRIdata"].get<string>()+".vti";
 
+    BlockVTIreader3D<T,BaseType> readerData (dataName, "physVelocity");
+    BlockData3D<T,BaseType> data = readerData.getBlockData();
+    BlockDataF3D<T, BaseType> velocityF(data);
+    //BlockExtractIndicatorF3D<T> velocityLattice(velocityF, *objectiveDomain);
+
+    // Store the Analytical Functor of the velocity functor in the global variable solution
+    clout << "Interpolating over velocity functor..." << endl;
+    // Read Spacing_
+    XMLreader MRI_config(dataName);
+
+  //velocityLattice,readerData...
+    solution = new SpecialAnalyticalFfromBlockF3D<T,BaseType>(velocityF, readerData.getCuboid(), Vector<T,3> (2e-4, 2e-4, 2e-4));
+
+    clout << "Interpolation finished." <<  endl;
+
+    solution->
+
+    std::cin.ignore(10, '\n');
   /*
    *  READING "F" STYLE
    *

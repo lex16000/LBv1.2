@@ -1,4 +1,4 @@
-/home/lex/workspace/openLBv1.2/runs/poiseuille3d/poiseuille3d.o: poiseuille3d.cpp /usr/include/stdc-predef.h \
+/home/schulz/git/LBv1.2/runs/poiseuille3d/poiseuille3d.o: poiseuille3d.cpp /usr/include/stdc-predef.h \
  ../../src/olb3D.h ../../src/boundary/boundary3D.h \
  ../../src/boundary/boundaryCondition3D.hh \
  ../../src/boundary/boundaryCondition3D.h ../../src/dynamics/dynamics.h \

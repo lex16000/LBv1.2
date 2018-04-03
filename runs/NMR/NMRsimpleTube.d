@@ -1,4 +1,4 @@
-/home/lex/workspace/openLBv1.2/runs/NMR/NMRsimpleTube.o: NMRsimpleTube.cpp /usr/include/stdc-predef.h \
+/home/schulz/git/LBv1.2/runs/NMR/NMRsimpleTube.o: NMRsimpleTube.cpp /usr/include/stdc-predef.h \
  ../../src/olb3D.h ../../src/boundary/boundary3D.h \
  ../../src/boundary/boundaryCondition3D.hh \
  ../../src/boundary/boundaryCondition3D.h ../../src/dynamics/dynamics.h \
@@ -681,4 +681,4 @@
  ../../src/particles/forces/transferExternalForce3D.hh \
  ../../src/particles/boundaries/boundaries.hh \
  ../../src/particles/boundaries/boundary3D.hh \
- ../../src/particles/boundaries/materialBoundary3D.hh ../NMRShared.h
+ ../../src/particles/boundaries/materialBoundary3D.hh

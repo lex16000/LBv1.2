@@ -296,6 +296,7 @@ bool CuboidGeometry3D<T>::getLatticeR(int latticeR[4], const T physR[3]) const
   if (iCtmp < getNc()) {
     latticeR[0] = iCtmp;
     latticeR[1] = (int)floor( (physR[0] - _cuboids[latticeR[0]].getOrigin()[0] ) / _cuboids[latticeR[0]].getDeltaR() + .5);
+    //std::cout << "latticeR[1]: getOriging[0], getDeltaR[0]: " << latticeR[1] << " " << _cuboids[latticeR[0]].getOrigin()[0] << " " << _cuboids[latticeR[0]].getDeltaR() << std::endl;
     latticeR[2] = (int)floor( (physR[1] - _cuboids[latticeR[0]].getOrigin()[1] ) / _cuboids[latticeR[0]].getDeltaR() + .5);
     latticeR[3] = (int)floor( (physR[2] - _cuboids[latticeR[0]].getOrigin()[2] ) / _cuboids[latticeR[0]].getDeltaR() + .5);
     return true;

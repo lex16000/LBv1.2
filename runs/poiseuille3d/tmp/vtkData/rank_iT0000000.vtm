@@ -17,13 +17,5 @@
 <DataSet index= "0" file="data/rank_iT0000000iC00003.vti">
 </DataSet>
 </Block>
-<Block index="4" >
-<DataSet index= "0" file="data/rank_iT0000000iC00004.vti">
-</DataSet>
-</Block>
-<Block index="5" >
-<DataSet index= "0" file="data/rank_iT0000000iC00005.vti">
-</DataSet>
-</Block>
 </vtkMultiBlockDataSet>
 </VTKFile>

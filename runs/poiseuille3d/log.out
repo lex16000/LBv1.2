@@ -1,0 +1,184 @@
+[MpiManager] Sucessfully initialized, numThreads=4
+[UnitConverter] ----------------- UnitConverter information -----------------
+[UnitConverter] -- Parameters:
+[UnitConverter] Resolution:                       N=              36
+[UnitConverter] Lattice velocity:                 latticeU=       0.0277778
+[UnitConverter] Lattice relaxation frequency:     omega=          1.25
+[UnitConverter] Lattice relaxation time:          tau=            0.8
+[UnitConverter] Characteristical length(m):       charL=          1
+[UnitConverter] Characteristical speed(m/s):      charU=          1
+[UnitConverter] Phys. kinematic viscosity(m^2/s): charNu=         0.1
+[UnitConverter] Phys. density(kg/m^d):            charRho=        1
+[UnitConverter] Characteristical pressure(N/m^2): charPressure=   0
+[UnitConverter] Reynolds number:                  reynoldsNumber= 10
+[UnitConverter] 
+[UnitConverter] -- Conversion factors:
+[UnitConverter] Voxel length(m):                  physDeltaX=     0.0277778
+[UnitConverter] Time step(s):                     physDeltaT=     0.000771605
+[UnitConverter] Velocity factor(m/s):             physVelocity=   36
+[UnitConverter] Density factor(kg/m^3):           physDensity=    1
+[UnitConverter] Mass factor(kg):                  physMass=       2.14335e-05
+[UnitConverter] Viscosity factor(m^2/s):          physViscosity=  1
+[UnitConverter] Force factor(N):                  physForce=      1
+[UnitConverter] Pressure factor(N/m^2):           physPressure=   1296
+[UnitConverter] -------------------------------------------------------------
+[prepareGeometry] Prepare Geometry ...
+[SuperGeometry3D] cleaned 28598 outer boundary voxel(s)
+[SuperGeometry3D] cleaned 0 inner boundary voxel(s)
+[SuperGeometry3D] the model is correct!
+[CuboidGeometry3D] ---Cuboid Stucture Statistics---
+[CuboidGeometry3D]  Number of Cuboids: 	4
+[CuboidGeometry3D]  Delta  (min): 		0.0277778
+[CuboidGeometry3D]         (max): 		0.0277778
+[CuboidGeometry3D]  Ratio  (min): 		0.487179
+[CuboidGeometry3D]         (max): 		2
+[CuboidGeometry3D]  Nodes  (min): 		27417
+[CuboidGeometry3D]         (max): 		29640
+[CuboidGeometry3D]  Weight (min): 		20757
+[CuboidGeometry3D]         (max): 		22800
+[CuboidGeometry3D] --------------------------------
+[SuperGeometryStatistics3D] materialNumber=0; count=27000; minPhysR=(-0.0277778,-0.0277778,-0.0277778); maxPhysR=(2.02778,1.02778,1.02778)
+[SuperGeometryStatistics3D] materialNumber=1; count=73657; minPhysR=(0,0,0); maxPhysR=(2,1,1)
+[SuperGeometryStatistics3D] materialNumber=2; count=11400; minPhysR=(-0.0277778,-0.0277778,-0.0277778); maxPhysR=(2.02778,1.02778,1.02778)
+[SuperGeometryStatistics3D] materialNumber=3; count=1009; minPhysR=(-0.0277778,0,0); maxPhysR=(-0.0277778,1,1)
+[SuperGeometryStatistics3D] materialNumber=4; count=1009; minPhysR=(2.02778,0,0); maxPhysR=(2.02778,1,1)
+[prepareGeometry] Prepare Geometry ... OK
+[prepareLattice] Prepare Lattice ...
+[prepareLattice] Prepare Lattice ... OK
+[main] starting simulation...
+[Timer] step=0; percent=0; passedTime=0.116; remTime=3006.6; MLUPs=0
+[LatticeStatistics] step=0; t=0; uMax=0.0277778; avEnergy=0.000113085; avRho=1.0037
+[getResults] velocity Flux at 0.5: 0.38856
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=388560; meanVelocity[m/s]=0.538006
+[getResults] pressure Flux at 0.5: 1.73381
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.73381; meanPressure[mmHg]=0.0180065
+[getResults] velocity Flux at 1: 0.388562
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=388562; meanVelocity[m/s]=0.538009
+[getResults] pressure Flux at 1: 1.15603
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.15603; meanPressure[mmHg]=0.012006
+[getResults] velocity Flux at 1.5: 0.388563
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=388563; meanVelocity[m/s]=0.538011
+[getResults] pressure Flux at 1.5: 0.578256
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=0.578256; meanPressure[mmHg]=0.00600547
+[error] velocity-L1-error(abs)=0.00160558; velocity-L1-error(rel)=0.00201668
+[error] velocity-L2-error(abs)=0.00140116; velocity-L2-error(rel)=0.00192305
+[error] velocity-Linf-error(abs)=0.00350422; velocity-Linf-error(rel)=0.00350422
+[error] strainRate-L1-error(abs)=1.28667; strainRate-L1-error(rel)=0.240982
+[error] strainRate-L2-error(abs)=0.594585; strainRate-L2-error(rel)=0.237633
+[error] strainRate-Linf-error(abs)=0.472222; strainRate-Linf-error(rel)=0.236111
+[error] pressure-L1-error(abs)=0.00120475; pressure-L1-error(rel)=0.000476946
+[error] pressure-L2-error(abs)=0.00169005; pressure-L2-error(rel)=0.000725529
+[error] pressure-Linf-error(abs)=0.0246481; pressure-Linf-error(rel)=0.00770253
+[ValueTracer] average=0.000114615; stdDev/average=0.00974372
+[ValueTracer] average=0.000114869; stdDev/average=0.00544759
+[ValueTracer] average=0.000114999; stdDev/average=0.00290967
+[Timer] step=1296; percent=5; passedTime=7.939; remTime=150.841; MLUPs=14.4272
+[LatticeStatistics] step=1296; t=1; uMax=0.0281146; avEnergy=0.00011478; avRho=1.00378
+[getResults] velocity Flux at 0.5: 0.391492
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=391492; meanVelocity[m/s]=0.542066
+[getResults] pressure Flux at 0.5: 1.76798
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.76798; meanPressure[mmHg]=0.0183613
+[getResults] velocity Flux at 1: 0.392138
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=392138; meanVelocity[m/s]=0.542961
+[getResults] pressure Flux at 1: 1.18021
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.18021; meanPressure[mmHg]=0.012257
+[getResults] velocity Flux at 1.5: 0.392827
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=392827; meanVelocity[m/s]=0.543914
+[getResults] pressure Flux at 1.5: 0.591072
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=0.591072; meanPressure[mmHg]=0.00613858
+[error] velocity-L1-error(abs)=0.00698306; velocity-L1-error(rel)=0.00877101
+[error] velocity-L2-error(abs)=0.0061656; velocity-L2-error(rel)=0.00846212
+[error] velocity-Linf-error(abs)=0.0461805; velocity-Linf-error(rel)=0.0461805
+[error] strainRate-L1-error(abs)=0.0730319; strainRate-L1-error(rel)=0.0136783
+[error] strainRate-L2-error(abs)=0.0695448; strainRate-L2-error(rel)=0.0277944
+[error] strainRate-Linf-error(abs)=0.993715; strainRate-Linf-error(rel)=0.496858
+[error] pressure-L1-error(abs)=0.0531958; pressure-L1-error(rel)=0.0210596
+[error] pressure-L2-error(abs)=0.0493368; pressure-L2-error(rel)=0.02118
+[error] pressure-Linf-error(abs)=0.612801; pressure-Linf-error(rel)=0.1915
+[ValueTracer] average=0.000114779; stdDev/average=0.00143207
+[ValueTracer] average=0.000114982; stdDev/average=0.000662344
+[ValueTracer] average=0.000114833; stdDev/average=0.000336691
+[ValueTracer] average=0.000114929; stdDev/average=0.000232752
+[Timer] step=2592; percent=10; passedTime=15.74; remTime=141.66; MLUPs=14.466
+[LatticeStatistics] step=2592; t=2; uMax=0.0281381; avEnergy=0.000114914; avRho=1.00376
+[getResults] velocity Flux at 0.5: 0.391638
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=391638; meanVelocity[m/s]=0.542268
+[getResults] pressure Flux at 0.5: 1.75818
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.75818; meanPressure[mmHg]=0.0182596
+[getResults] velocity Flux at 1: 0.392388
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=392388; meanVelocity[m/s]=0.543307
+[getResults] pressure Flux at 1: 1.1724
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.1724; meanPressure[mmHg]=0.012176
+[getResults] velocity Flux at 1.5: 0.393133
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=393133; meanVelocity[m/s]=0.544339
+[getResults] pressure Flux at 1.5: 0.586636
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=0.586636; meanPressure[mmHg]=0.0060925
+[error] velocity-L1-error(abs)=0.00743611; velocity-L1-error(rel)=0.00934006
+[error] velocity-L2-error(abs)=0.00660685; velocity-L2-error(rel)=0.00906774
+[error] velocity-Linf-error(abs)=0.0461985; velocity-Linf-error(rel)=0.0461985
+[error] strainRate-L1-error(abs)=0.0765222; strainRate-L1-error(rel)=0.014332
+[error] strainRate-L2-error(abs)=0.0700399; strainRate-L2-error(rel)=0.0279923
+[error] strainRate-Linf-error(abs)=0.99382; strainRate-Linf-error(rel)=0.49691
+[error] pressure-L1-error(abs)=0.0381108; pressure-L1-error(rel)=0.0150876
+[error] pressure-L2-error(abs)=0.0367639; pressure-L2-error(rel)=0.0157825
+[error] pressure-Linf-error(abs)=0.598677; pressure-Linf-error(rel)=0.187086
+[ValueTracer] average=0.000114874; stdDev/average=0.000178718
+[ValueTracer] average=0.000114902; stdDev/average=0.000125688
+[ValueTracer] average=0.000114891; stdDev/average=8.30054e-05
+[ValueTracer] average=0.000114894; stdDev/average=5.01637e-05
+[Timer] step=3888; percent=15; passedTime=23.498; remTime=133.155; MLUPs=14.5443
+[LatticeStatistics] step=3888; t=3; uMax=0.0281364; avEnergy=0.000114897; avRho=1.00376
+[getResults] velocity Flux at 0.5: 0.391616
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=391616; meanVelocity[m/s]=0.542237
+[getResults] pressure Flux at 0.5: 1.75693
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.75693; meanPressure[mmHg]=0.0182466
+[getResults] velocity Flux at 1: 0.392348
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=392348; meanVelocity[m/s]=0.543251
+[getResults] pressure Flux at 1: 1.17145
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.17145; meanPressure[mmHg]=0.0121661
+[getResults] velocity Flux at 1.5: 0.39308
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=393080; meanVelocity[m/s]=0.544264
+[getResults] pressure Flux at 1.5: 0.586109
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=0.586109; meanPressure[mmHg]=0.00608704
+[error] velocity-L1-error(abs)=0.00735864; velocity-L1-error(rel)=0.00924276
+[error] velocity-L2-error(abs)=0.00654659; velocity-L2-error(rel)=0.00898502
+[error] velocity-Linf-error(abs)=0.0461963; velocity-Linf-error(rel)=0.0461963
+[error] strainRate-L1-error(abs)=0.0762118; strainRate-L1-error(rel)=0.0142739
+[error] strainRate-L2-error(abs)=0.0699789; strainRate-L2-error(rel)=0.0279679
+[error] strainRate-Linf-error(abs)=0.994249; strainRate-Linf-error(rel)=0.497124
+[error] pressure-L1-error(abs)=0.0362212; pressure-L1-error(rel)=0.0143396
+[error] pressure-L2-error(abs)=0.0351975; pressure-L2-error(rel)=0.0151101
+[error] pressure-Linf-error(abs)=0.596736; pressure-Linf-error(rel)=0.18648
+[ValueTracer] average=0.000114894; stdDev/average=2.77859e-05
+[ValueTracer] average=0.000114893; stdDev/average=1.37146e-05
+[main] Simulation converged.
+[Timer] step=4247; percent=16.385; passedTime=26.071; remTime=133.044; MLUPs=12.1492
+[LatticeStatistics] step=4247; t=3.27701; uMax=0.0281359; avEnergy=0.000114893; avRho=1.00376
+[getResults] velocity Flux at 0.5: 0.391612
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=391612; meanVelocity[m/s]=0.542233
+[getResults] pressure Flux at 0.5: 1.75714
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.75714; meanPressure[mmHg]=0.0182488
+[getResults] velocity Flux at 1: 0.392342
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=392342; meanVelocity[m/s]=0.543242
+[getResults] pressure Flux at 1: 1.17161
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=1.17161; meanPressure[mmHg]=0.0121677
+[getResults] velocity Flux at 1.5: 0.393072
+[SuperPlaneIntegralFluxVelocity3D] regionName=inflow; regionSize[m^2]=0.722222; volumetricFlowRate[ml/s]=393072; meanVelocity[m/s]=0.544253
+[getResults] pressure Flux at 1.5: 0.586199
+[SuperPlaneIntegralFluxPressure3D] regionName=inflow; regionSize[m^2]=0.722222; force[N]=0.586199; meanPressure[mmHg]=0.00608797
+[error] velocity-L1-error(abs)=0.007347; velocity-L1-error(rel)=0.00922813
+[error] velocity-L2-error(abs)=0.00653563; velocity-L2-error(rel)=0.00896998
+[error] velocity-Linf-error(abs)=0.0461958; velocity-Linf-error(rel)=0.0461958
+[error] strainRate-L1-error(abs)=0.0761283; strainRate-L1-error(rel)=0.0142582
+[error] strainRate-L2-error(abs)=0.0699663; strainRate-L2-error(rel)=0.0279629
+[error] strainRate-Linf-error(abs)=0.994255; strainRate-Linf-error(rel)=0.497128
+[error] pressure-L1-error(abs)=0.0365355; pressure-L1-error(rel)=0.014464
+[error] pressure-L2-error(abs)=0.0354552; pressure-L2-error(rel)=0.0152207
+[error] pressure-Linf-error(abs)=0.597036; pressure-Linf-error(rel)=0.186574
+[Timer] 
+[Timer] ----------------Summary:Timer----------------
+[Timer] measured time (rt) : 26.457s
+[Timer] measured time (cpu): 25.845s
+[Timer] average MLUPs :       13.978
+[Timer] average MLUPps:       3.494
+[Timer] ---------------------------------------------

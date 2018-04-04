@@ -59,12 +59,12 @@ typedef enum {bounceBack, local, interpolated, bouzidi} BoundaryType;
 // Parameters for the simulation setup
 FlowType flowType = nonForced;
 BoundaryType boundaryType = interpolated;
-const T length  = 20.;         // length of the pie
+const T length  = 2.;         // length of the pie
 const T diameter  = 1.;       // diameter of the pipe
 const T radius  = 0.5;        // radius of the pipe
-int N =9;                   // resolution of the model
+int N = 36;                   // resolution of the model
 const T Re = 10.;             // Reynolds number
-const T maxPhysT = 100.;       // max. simulation time in s, SI unit
+const T maxPhysT = 20.;       // max. simulation time in s, SI unit
 const T physInterval = 0.25;  // interval for the convergence check in s
 const T residuum = 1e-5;      // residuum for the convergence check
 
@@ -401,6 +401,55 @@ void getResults( SuperLattice3D<T,DESCRIPTOR>& sLattice, Dynamics<T, DESCRIPTOR>
     // Lattice statistics console output
     sLattice.getStatistics().print( iT,converter.getPhysTime( iT ) );
 
+    // Flux at the inflow and outflow region
+
+
+      Vector<T, 3> origin(0, radius, radius);
+          Vector<T, 3> extend = origin;
+
+          // Set material number for inflow
+          origin[0] = -converter.getPhysDeltaX() * 2;
+          extend[0] = converter.getPhysDeltaX() * 2;
+
+
+          // Set material number for outflow
+          origin[0] = length - 2 * converter.getPhysDeltaX();
+          extend[0] = length + 2 * converter.getPhysDeltaX();
+
+//          std::vector<int> materials = { 1, 3, 4, 5 };
+//      IndicatorCircle3D<T> inflow( 0.5, 0.5, 0.5, 1., 0., 0., 1. );
+//      SuperPlaneIntegralFluxVelocity3D<T> vFluxInflow( sLattice, converter, superGeometry, inflow, materials, BlockDataReductionMode::Discrete );
+//      vFluxInflow.print( "inflow","ml/s" );
+//      SuperPlaneIntegralFluxPressure3D<T> pFluxInflow( sLattice, converter, superGeometry, inflow, materials, BlockDataReductionMode::Discrete );
+//      pFluxInflow.print( "inflow","N","mmHg" );
+
+
+      std::vector<T> zPositions = {0.5, 1.0, 1.5, };
+
+    	   std::vector<int> materials = { 1, 3, 4 };
+    	   for (auto& zPos : zPositions) {
+    		   Vector<T, 3> center(zPos, 0.5, 0.5);
+    		   Vector<T, 3> normal(1,0,0);
+    		   T radius = 1.;
+    		   IndicatorCircle3D<T> slice( center, normal, radius );
+    		   SuperPlaneIntegralFluxVelocity3D<T> vFluxInflow( sLattice, converter, superGeometry, slice, materials, BlockDataReductionMode::Discrete );
+    		   int inputV[1] = {};
+    		   T outputV[vFluxInflow.getTargetDim()] = {T()};
+    		   vFluxInflow(outputV, inputV);
+    		   clout << "velocity Flux at " << zPos << ": " << outputV[0] << std::endl;
+    		   vFluxInflow.print( "inflow","ml/s" );
+
+    		   SuperPlaneIntegralFluxPressure3D<T> pFluxInflow( sLattice, converter, superGeometry, slice, materials, BlockDataReductionMode::Discrete );
+    		   int inputP[1] = {};
+    		   T outputP[pFluxInflow.getTargetDim()] = {T()};
+    		   pFluxInflow(outputP, inputP);
+    		   clout << "pressure Flux at " << zPos << ": " << outputP[0] << std::endl;
+    		   pFluxInflow.print( "inflow","N","mmHg" );
+
+    	   }
+
+
+
     // Error norms
     error( superGeometry, sLattice, converter, bulkDynamics );
   }
@@ -452,7 +501,7 @@ int main( int argc, char* argv[] ) {
 
   UnitConverterFromResolutionAndRelaxationTime<T, DESCRIPTOR> const converter(
     int {N},        // resolution: number of voxels per charPhysL
-    (T)   0.51,      // latticeRelaxationTime: relaxation time, have to be greater than 0.5!
+    (T)   0.8,      // latticeRelaxationTime: relaxation time, have to be greater than 0.5!
     (T)   diameter, // charPhysLength: reference length of simulation geometry
     (T)   1,        // charPhysVelocity: maximal/highest expected velocity during simulation in __m / s__
     (T)   1./Re,    // physViscosity: physical kinematic viscosity in __m^2 / s__
@@ -462,8 +511,6 @@ int main( int argc, char* argv[] ) {
   converter.print();
   // Writes the converter log in a file
   converter.write("poiseuille3d");
-
-  std::cin.ignore(10,'\n');
 
 
   // === 2nd Step: Prepare Geometry ===
@@ -482,7 +529,7 @@ int main( int argc, char* argv[] ) {
   CuboidGeometry3D<T> cuboidGeometry(extendedDomain, converter.getPhysDeltaX(), noOfCuboids);
   if (flowType == forced) {
     // Periodic boundaries in x-direction
-    cuboidGeometry.setPeriodicity( false, false, false );
+    cuboidGeometry.setPeriodicity( true, false, false );
   }
 
   // Instantiation of a loadBalancer

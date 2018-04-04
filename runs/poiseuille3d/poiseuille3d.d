@@ -1,4 +1,4 @@
-/home/schulz/workspace/openLBv1.2/runs/poiseuille3d/poiseuille3d.o: poiseuille3d.cpp /usr/include/stdc-predef.h \
+/home/schulz/git/LBv1.2/runs/poiseuille3d/poiseuille3d.o: poiseuille3d.cpp /usr/include/stdc-predef.h \
  ../../src/olb3D.h ../../src/boundary/boundary3D.h \
  ../../src/boundary/boundaryCondition3D.hh \
  ../../src/boundary/boundaryCondition3D.h ../../src/dynamics/dynamics.h \
@@ -266,7 +266,39 @@
  /usr/include/c++/5/set /usr/include/c++/5/bits/stl_set.h \
  /usr/include/c++/5/bits/stl_multiset.h \
  ../../src/communication/loadBalancer.h ../../src/core/singleton.h \
- ../../src/communication/mpiManager.h \
+ ../../src/communication/mpiManager.h /usr/lib/openmpi/include/mpi.h \
+ /usr/lib/openmpi/include/mpi_portable_platform.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/mpicxx.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/constants.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/functions.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/datatype.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/exception.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/op.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/status.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/request.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/group.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/comm.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/win.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/file.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/errhandler.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intracomm.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/topology.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intercomm.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/info.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/datatype_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/functions_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/request_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/comm_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intracomm_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/topology_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/intercomm_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/group_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/op_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/errhandler_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/status_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/info_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/win_inln.h \
+ /usr/lib/openmpi/include/openmpi/ompi/mpi/cxx/file_inln.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  ../../src/geometry/cuboidGeometry3D.h /usr/include/c++/5/fstream \

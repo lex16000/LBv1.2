@@ -1,0 +1,135 @@
+#
+# Program to put the ct-slices of porous structure together to get a 3d array.
+# It can easily be implemented in the LB code,
+# since material-domain-voxels and fluid-domain-voxels can be recognised in a binary array
+#
+# The array is written to a .vtk file to plot the array with paraview <- mavi can only plot small arrays
+#
+
+"""
+.vtk file is also restricted to a certain number of slices: 250 slices is barely working. I do not know, if it is my computer, that is so bad, or in general, it is
+quite costly to visualise voxel pictures
+
+"""
+
+import numpy
+from pylab import *
+import matplotlib.pyplot as plt
+from PIL import Image                       # image processing
+#from mpl_toolkits.mplot3d import Axes3D    # 3d plotting stuff
+import mayavi.mlab as mavi                  # better 3d plotting stuff
+from tvtk.api import tvtk, write_data       # export to .vtk file
+
+
+# total number of slices
+numberOfPics = 4#191
+picList = numpy.arange(numberOfPics)
+
+
+# get array "obstacle" with dimension (numberOfPics x length x width)
+# length and width are obtained from a test picture (dummyPic) since all slices have the same shape
+dummyPic = Image.open("0002_00_bin_01215.tif")
+dummyArray = numpy.array( dummyPic, dtype = float)
+
+obstacle = numpy.zeros((numberOfPics, dummyArray.shape[0], dummyArray.shape[1]))
+
+#
+# convert each ct slice into binary array and put them together in the big 3d obstacle array
+#
+for ii in range(numberOfPics):
+
+    # read image
+    pic = Image.open("0002_00_bin_01215.tif")    
+    # convert into grey scale picture (actually not necessary, since it is already a black and white pic)
+    pic = pic.convert('L')
+
+
+    # get the grey values and asign black pixel to 0 and white pixel to 1
+    # 1 and 0 interchangend 
+    values = [1 if v > 128 else 2 for v in range(256)]
+    obstacletmp = pic.point(values)
+    obstacle[ii] = numpy.array(obstacletmp)     # at this point, the big obstacle array is filled with 1 and 0
+
+
+
+
+oo = obstacle[0]
+plt.contourf(oo)
+plt.axis('off')
+plt.grid()
+plt.colorbar()
+plt.show()
+
+
+# cut the array, such that we can divide the number by 4
+print obstacle.shape
+print obstacle.shape[0] / 2.
+print obstacle.shape[1] / 4.
+print obstacle.shape[2]%4.
+for ii in range(4):
+    if (obstacle.shape[2] - ii)%4 == 0:
+        print obstacle.shape[2] - ii, ii
+        if ii != 0:
+            cut = ii
+            
+if cut != 0:
+    newObstacle = obstacle[:,0:-cut,0:-cut]
+else:
+    newObstacle = obstacle.copy()
+
+print newObstacle.shape
+
+
+def plot(array):
+    plt.contourf(array)
+    plt.axis('off')
+    plt.grid()
+    plt.colorbar()
+    plt.show()
+    
+    
+plot(newObstacle[0])
+
+# get empty array with the proper size
+badArray = numpy.zeros((newObstacle.shape[0]/2., newObstacle.shape[1]/2., newObstacle.shape[2]/2.))
+
+print badArray.shape
+
+# the voxel at 0,0,0 consists of 0,0,0, 0+1,0,0, 0,0+1,0,  0+1,0+1,0, 0,0+1,0+1, 0+1,0+1,0+1, 0+1,0,0+1, 0,0,0+1
+# for the next voxel at 1,0,0 we have to shift the original array by 2
+for ii in range(badArray.shape[1]):
+    for jj in range(badArray.shape[2]):
+        for kk in range(badArray.shape[0]):
+            
+            neighbours = []
+            neighbours.append( [newObstacle[2*kk,2*ii,2*jj], newObstacle[2*kk,2*ii,2*jj+1], 
+                                newObstacle[2*kk,2*ii+1, 2*jj], newObstacle[2*kk,2*ii+1,2*jj+1],
+                                newObstacle[2*kk+1,2*ii,2*jj], newObstacle[2*kk+1,2*ii,2*jj+1], 
+                                newObstacle[2*kk+1,2*ii+1, 2*jj], newObstacle[2*kk+1,2*ii+1,2*jj+1]] )
+            
+            pixelValue =  numpy.array(neighbours).max()
+            badArray[kk,ii,jj] = pixelValue
+
+
+def writeToVTK(filename, *array1):
+    print "writing vtk ..."
+    def namestr(obj, namespace):
+        return [name for name in namespace if namespace[name] is obj]       
+    name = namestr(array1[0], globals())       
+    #write data to .vtk file, in order to plot with paraview
+    vtkFile = tvtk.ImageData(spacing = (1, 1, 1), origin = (0, 0, 0)) # get an empty "vtk array"
+    vtkFile.point_data.scalars = numpy.ravel(array1[0], order='F') # flattens the obstalce array in C-style and writes the values to the vtk array
+    vtkFile.point_data.scalars.name = str(name) # shown in paraview
+    vtkFile.dimensions = array1[0].shape
+    write_data(vtkFile,str(filename)+'.vtk') 
+    print "writing vtk ... ok\n"
+
+
+
+    
+    
+writeToVTK("org", newObstacle)
+writeToVTK("shrinked", badArray)
+
+
+print "done"
